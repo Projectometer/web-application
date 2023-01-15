@@ -2,8 +2,8 @@
   <q-layout class="o-layout" view="hHh Lpr fFf"> <!-- Be sure to play with the Layout demo on docs -->
 
     <!-- (Optional) The Header -->
-    <q-header elevated class="q-layout-header">
-      <q-toolbar>
+    <q-header elevated class="row q-layout-header">
+      <q-toolbar class="col col-2">
         <q-avatar rounded size="2.5rem">
 
           <svg
@@ -23,14 +23,13 @@
       </q-toolbar>
 
 
-      <ToolbarComponent></ToolbarComponent>
+      <ToolbarComponent class="col col-10"></ToolbarComponent>
     </q-header>
 
 
     <q-page-container class="q-ma-sm o-container">
       <!-- This is where pages get injected -->
       <router-view />
-      <p class="pjMeter text-center">Projectometer</p>
 
     </q-page-container>
 

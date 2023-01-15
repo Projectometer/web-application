@@ -1,0 +1,124 @@
+.btn {
+  border-radius: .3rem;
+  width: 150px;
+  height: 50px;
+  border: .05rem solid #46DCFF; // Bonus Color Turkis
+  box-sizing: border-box;
+  background: #333333;
+  ;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+  transition: 1s;
+}
+
+.btn::before,
+.btn::after {
+  position: absolute;
+  background: #333333;
+  z-index: -1;
+  transition: .2s;
+  content: '';
+}
+
+.btn::before {
+  height: 50px;
+  width: 130px;
+}
+
+.btn::after {
+  width: 150px;
+  height: 30px;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.btn:hover::before {
+  width: 0px;
+  background: #333333;
+}
+
+.btn:hover::after {
+  height: 0px;
+  background: #333333;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0);
+}
+
+
+
+.btn-small {
+  border-radius: .3rem;
+  width: 2rem;
+  height: 2rem;
+  margin-left: .5rem;
+  margin-right: .5rem;
+  border: .05rem solid #46DCFF; // Bonus Color Turkis
+  box-sizing: border-box;
+  background: #333333;
+  ;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+  transition: 2s;
+}
+
+
+.btn-small::before,
+.btn-small::after {
+  position: absolute;
+  background: #333333;
+  z-index: -1;
+  transition: .3s;
+  content: '';
+}
+
+.btn-small::before {
+  height: 80px;
+  width: 80px;
+}
+
+.btn-small::after {
+  width: 80px;
+  height: 30px;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.btn-small:hover::before {
+  width: 0px;
+  background: #333333;
+}
+
+.btn-small:hover::after {
+  height: 0px;
+  background: #333333;
+}
+
+.btn-small:hover {
+  background: rgba(255, 255, 255, 0);
+}
