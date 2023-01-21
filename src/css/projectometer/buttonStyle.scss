@@ -62,8 +62,6 @@
 
 .btn-small {
   border-radius: .3rem;
-  width: 2rem;
-  height: 2rem;
   margin-left: .5rem;
   margin-right: .5rem;
   border: .05rem solid #46DCFF; // Bonus Color Turkis
@@ -121,4 +119,8 @@
 
 .btn-small:hover {
   background: rgba(255, 255, 255, 0);
+}
+
+.q-tab__content {
+  min-width: 0;
 }
