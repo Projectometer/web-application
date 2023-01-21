@@ -52,3 +52,58 @@
 .text-body {
   background-color: #000000;
 }
+
+
+.avatar-logo {
+  margin-left: .5rem;
+}
+
+.sq-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: .5rem;
+  justify-content: left;
+
+  background-color: $xxBlack80;
+}
+
+.q-ma-sm {
+  margin: 0%;
+}
+
+.user-data-style {
+  font-size: .8rem;
+  height: 1.2rem;
+}
+
+
+.user-data-style-user {
+  font-size: .8rem;
+  height: 1.2rem;
+  margin-top: .6rem;
+}
+
+.q-btn-style {
+  line-height: unset;
+  width: max-content;
+  margin-right: 1rem;
+}
+
+
+.txt-color {
+  color: $xxBlack40;
+}
+
+.time-style {
+  margin-top: .6rem;
+  margin-left: 4.5rem;
+  justify-items: center;
+  color: $xxBlack20;
+}
+
+.date-style {
+  margin-left: 4.5rem;
+  justify-items: center;
+  color: $xxBlack60;
+
+}

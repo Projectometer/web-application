@@ -4,7 +4,7 @@
     <!-- (Optional) The Header -->
     <q-header elevated class="row q-layout-header">
       <q-toolbar class="col col-2">
-        <q-avatar rounded size="2.5rem">
+        <q-avatar class="avatar-logo" rounded size="2.5rem">
 
           <svg
             style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
@@ -39,6 +39,3 @@
 <script setup lang="ts">
 import ToolbarComponent from 'src/components/layout/ToolbarComponent.vue';
 </script>
-
-
-
