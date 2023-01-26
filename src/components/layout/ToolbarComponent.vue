@@ -6,7 +6,7 @@
     </q-tabs>
 
     <q-tabs inline-label v-if="userData !== null">
-      <q-route-tab class="col col-1  btn-small noselect " name="Timer" icon="alarm" to="/Timer" />
+      <q-route-tab class="col col-1  btn-small noselect " name="Timer" icon="alarm" to="/Calendar" />
       <q-tooltip class="text-body2">Timer</q-tooltip>
     </q-tabs>
 
@@ -66,10 +66,8 @@
 
     </q-tabs>
 
-
-
-
-    <q-btn outline inline-label v-if="userData !== null" round class="sq-btn" color="$xxBlack20" icon="notifications">
+    <q-btn outline inline-label round class="sq-btn" color="$xxBlack20" icon="notifications">
+      <q-badge rounded class="q-badge-style" floating inline-label v-if="userData !== null">7</q-badge>
     </q-btn>
 
     <q-tabs inline-label v-if="userData !== null">

@@ -38,16 +38,17 @@
 
 
 .o-layout {
-  background: rgb(0, 0, 0);
   background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(51, 51, 51, 1) 100%);
 }
 
 .o-container {
   background-image: url("/icons/ex.svg");
-  background-position: center center;
   background-repeat: no-repeat;
   background-size: 70vw 70vh;
+  background-position-x: center;
+  background-position-y: 12rem;
 }
+
 
 .text-body {
   background-color: #000000;

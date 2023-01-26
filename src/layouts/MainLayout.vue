@@ -2,7 +2,7 @@
   <q-layout class="o-layout" view="hHh Lpr fFf"> <!-- Be sure to play with the Layout demo on docs -->
 
     <!-- (Optional) The Header -->
-    <q-header elevated class="row q-layout-header">
+    <q-header class="row q-layout-header">
       <q-toolbar class="col col-2">
         <q-avatar class="avatar-logo" rounded size="2.5rem">
 
@@ -24,10 +24,14 @@
 
 
       <ToolbarComponent class="col col-10"></ToolbarComponent>
+
+      <q-page-sticky expand position="top" class="calendar-horizontal-preview clendar-horizontal-hover"></q-page-sticky>
+
+
     </q-header>
 
 
-    <q-page-container class="q-ma-sm o-container">
+    <q-page-container>
       <!-- This is where pages get injected -->
       <router-view />
 
