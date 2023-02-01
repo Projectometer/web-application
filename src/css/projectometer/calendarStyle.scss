@@ -7,7 +7,7 @@
 
 .calendar-padding {
   border: solid 1px black;
-  height: 40rem;
+  height: 30rem;
   padding: 1rem;
 }
 
@@ -30,4 +30,16 @@
   -moz-border-radius-bottomright: .5rem;
   border-top-right-radius: .5rem;
   border-bottom-right-radius: .5rem;
+}
+
+.clendar-header-style {
+  height: 3rem;
+  border: solid 1px black;
+  padding: 1rem !important;
+}
+
+.calendar-calendar-padding {
+  border: solid 1px black;
+  height: 25rem !important;
+
 }
