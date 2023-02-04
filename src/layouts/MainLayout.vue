@@ -22,24 +22,26 @@
         </q-toolbar-title>
       </q-toolbar>
 
-
       <ToolbarComponent class="col col-10"></ToolbarComponent>
-
-      <q-page-sticky expand position="top" class="calendar-horizontal-preview clendar-horizontal-hover"></q-page-sticky>
-
-
+      <q-page-sticky expand position="top" class="calendar-horizontal-preview clendar-horizontal-hover"
+        v-if="isLoggedIn"></q-page-sticky>
     </q-header>
-
-
     <q-page-container>
-      <!-- This is where pages get injected -->
       <router-view />
 
     </q-page-container>
-
   </q-layout>
 </template>
 
 <script setup lang="ts">
 import ToolbarComponent from 'src/components/layout/ToolbarComponent.vue';
+import { computed } from 'vue'
+import { useAuthStore } from 'src/stores/AuthStore'
+
+const authStore = useAuthStore();
+const isLoggedIn = computed(() => {
+  console.log(authStore)
+  return authStore.isLoggedIn
+})
+
 </script>
