@@ -1,3 +1,5 @@
+<!-- eslint-disable @typescript-eslint/no-unused-vars -->
+<!-- eslint-disable @typescript-eslint/no-unused-vars -->
 <template>
 
   <q-page class="calendar-container">
@@ -11,9 +13,9 @@
             <q-tab name="mails" icon="timer"></q-tab>
             <q-tab name="alarms" icon="play_for_work"></q-tab>
             <q-tab name="movies" icon="model_training"></q-tab>
-            <q-tab name="mails" icon="timer"></q-tab>
-            <q-tab name="alarms" icon="play_for_work"></q-tab>
-            <q-tab name="movies" icon="model_training"></q-tab>
+            <q-tab name="actualing" icon="visibility"></q-tab>
+            <q-tab name="dashboard" icon="dashboard"></q-tab>
+            <q-tab name="sample" icon="lightbulb"></q-tab>
           </q-tabs>
 
         </div>
@@ -21,7 +23,87 @@
 
       <div class="col col-11 calendar-padding bg-calendar-calendar">
         <div class="col calendar-padding">
-          <div class="row row1 clendar-header-style calendar-header-padding"></div>
+          <div class="row row1 clendar-header-style">
+
+            <q-btn @click="showModal" icon="tune" class="col col-1">
+              <q-tooltip class="text-caption">Tuner</q-tooltip>
+            </q-btn>
+
+            <q-dialog v-model="tuneOptions">
+
+              <q-card class="my-card calendar-padding-new q-card-calendar-tune-style">
+                <q-card-section>
+                  <div class="text-h6">Tune Kalendar</div>
+                </q-card-section>
+
+                <q-separator dark inset></q-separator>
+
+                <q-card-section>
+                  <div class="tune-card-selection-style">
+                    <q-btn @click="showModal" icon="public" label="Choose location">
+                    </q-btn>
+                  </div>
+
+                  <div class="tune-card-selection-style">
+                    <q-toggle label="Short Month label" v-model="shortMonthLable"></q-toggle>
+                  </div>
+                  <div class="tune-card-selection-style">
+                    <q-toggle label="Short Week label" v-model="shortWeekLable"></q-toggle>
+                  </div>
+                  <div class="tune-card-selection-style">
+                    <q-toggle label="24hr interval labels" v-model="hrIntervalLable"></q-toggle>
+                  </div>
+                  <div class="tune-card-selection-style style-left">
+                    <q-badge class="calendar-tune-range-badge-style">
+                      Interval height (Daily)
+                    </q-badge>
+                    <q-slider v-model="intervalHeightDaily" :min="0" :max="50"></q-slider>
+                  </div>
+                  <div class="tune-card-selection-style style-left">
+                    <q-badge class="calendar-tune-range-badge-style">
+                      Interval height (Monthly)
+                    </q-badge>
+                    <q-slider v-model="intervalHeightMontgly" :min="0" :max="50"></q-slider>
+                  </div>
+                  <div class="tune-card-selection-style style-left">
+                    <q-badge class="calendar-tune-range-badge-style">
+                      Day height (Monthly)
+                    </q-badge>
+                    <q-slider v-model="dayHeightMontgly" :min="0" :max="50"></q-slider>
+                  </div>
+                  <div class="tune-card-selection-style style-left">
+                    <q-badge class="calendar-tune-range-badge-style">
+                      Resource Height (Scheduler)
+                    </q-badge>
+                    <q-slider v-model="resourceHeightScheduler" :min="0" :max="50"></q-slider>
+                  </div>
+                  <div class="tune-card-selection-style style-left">
+                    <q-badge class="calendar-tune-range-badge-style">
+                      Resource Width (scheduler)
+                    </q-badge>
+                    <q-slider v-model="resourceWidthScheduler" :min="0" :max="50"></q-slider>
+                  </div>
+                </q-card-section>
+
+                <q-separator dark inset></q-separator>
+
+                <q-card-actions align="right">
+                  <q-btn flat label="Abbrechen" v-close-popup />
+                  <q-btn flat label="Speichern" v-close-popup />
+                </q-card-actions>
+
+
+            </q-dialog>
+
+
+
+            <q-space></q-space>
+
+
+            <q-btn-dropdown class="col col-2 q-btn-claendar-header" label="Day"></q-btn-dropdown>
+
+
+          </div>
           <q-calendar class="row row12 calendar-calendar-padding"></q-calendar>
         </div>
       </div>
@@ -32,6 +114,15 @@
 
 </template>
 
-<script setup lang="ts">
+<script setup>
+import { ref } from 'vue'
 import { QCalendar } from '@quasar/quasar-ui-qcalendar'
+
+const tuneOptions = ref(false);
+
+const showModal = () => {
+  tuneOptions.value = true;
+}
+
+
 </script>

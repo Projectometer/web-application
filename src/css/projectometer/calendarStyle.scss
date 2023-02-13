@@ -11,6 +11,11 @@
   padding: 1rem;
 }
 
+.calendar-padding-new {
+  height: 30rem;
+  padding: 1rem;
+}
+
 .bg-calendar-aside {
   background-color: $xxBlack05;
   -webkit-border-top-left-radius: .5rem;
@@ -34,8 +39,7 @@
 
 .clendar-header-style {
   height: 3rem;
-  border: solid 1px black;
-  padding: 1rem !important;
+
 }
 
 .calendar-calendar-padding {
