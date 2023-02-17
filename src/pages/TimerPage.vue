@@ -82,8 +82,8 @@
                   </q-card-section>
                   <q-separator dark inset></q-separator>
                   <q-card-actions align="right">
-                    <q-btn flat label="Abbrechen" v-close-popup />
-                    <q-btn flat label="Speichern" v-close-popup class="tune-save-button-style" />
+                    <q-btn flat label="Abbrechen" v-close-popup class="btn-abort-modal" />
+                    <q-btn flat label="Speichern" v-close-popup class="tune-save-button-style btn-save-modal" />
                   </q-card-actions>
                 </q-scroll-area>
               </q-card>
@@ -94,19 +94,21 @@
             <div>
               <q-btn flat dense round icon="keyboard_arrow_right" @click="onNext"></q-btn>
             </div>
+            <div class="calendar-toolbar-radio-style">
+              <q-radio v-model="calendarShape" val="15 min" label="15 min" color="green-14"></q-radio>
+              <q-radio v-model="calendarShape" val="30 min" label="30 min" color="green-14"></q-radio>
+              <q-radio v-model="calendarShape" val="60 min" label="60 min" color="green-14"></q-radio>
+            </div>
+            <strong class="padding-left-test"> Your Selected Time Shape: {{ calendarShape }}</strong>
             <q-space></q-space>
 
-
             <q-btn-dropdown class="col col-2 q-btn-claendar-header justify-center" label="Day"></q-btn-dropdown>
-
 
           </div>
           <q-calendar class="calendar-calendar-padding "></q-calendar>
         </div>
       </div>
-
     </div>
-
   </q-page>
 
 </template>
@@ -116,10 +118,10 @@ import { ref } from 'vue'
 import { QCalendar } from '@quasar/quasar-ui-qcalendar'
 
 const tuneOptions = ref(false);
-
 const showModal = () => {
   tuneOptions.value = true;
 }
 
+const calendarShape = ref('calendarShape.value');
 
 </script>

@@ -142,10 +142,85 @@
 
 .tune-save-button-style {
   margin-right: 1rem;
+
 }
 
 
-.tune-save-button-style:hover {
-  margin-right: 1rem;
-  border-color: #00AA00 !important;
+.calendar-toolbar-radio-style {
+  margin-left: 2rem;
+}
+
+.padding-left-test {
+  padding-left: 2rem;
+}
+
+
+
+.btn-save-modal {
+  border-radius: .3rem;
+  width: 7rem;
+  height: 2rem;
+  border: .05rem solid $xxGreen-DB; // Bonus Color Turkis
+  box-sizing: border-box;
+  background: #ffffff00;
+  ;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+}
+
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.btn-save-modal:hover {
+  background: rgba(255, 255, 255, 0);
+  border: .1rem solid $xxGreen-DB;
+  background-color: $xxGreen-DB;
+  color: $xxBlack02;
+}
+
+
+
+.btn-abort-modal {
+  border-radius: .3rem;
+  width: 7rem;
+  height: 2rem;
+  border: .05rem solid $xxRed-DB;
+  box-sizing: border-box;
+  background: #ffffff00;
+  ;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.btn-abort-modal:hover {
+  background: rgba(255, 255, 255, 0);
+  border: .1rem solid $xxRed-DB;
+  background-color: $xxRed-DB;
+  color: $xxBlack02;
 }

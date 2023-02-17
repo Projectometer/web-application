@@ -1,6 +1,5 @@
 <template>
-  <q-page padding class="text-center">
-    <h3>Redirecting to main page</h3>
+  <q-page padding class="text-center redirect-page-style">
   </q-page>
 </template>
 
