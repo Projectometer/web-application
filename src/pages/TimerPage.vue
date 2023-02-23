@@ -1,5 +1,4 @@
 <template>
-
   <q-page class="calendar-container">
 
     <div class="row ">
@@ -81,47 +80,72 @@
                     </div>
                   </q-card-section>
                   <q-separator dark inset></q-separator>
-                  <q-card-actions align="right">
+                  <q-card-actions align="center">
                     <q-btn flat label="Abbrechen" v-close-popup class="btn-abort-modal" />
-                    <q-btn flat label="Speichern" v-close-popup class="tune-save-button-style btn-save-modal" />
+                    <q-btn flat label="Speichern" v-close-popup class="btn-save-modal" />
                   </q-card-actions>
                 </q-scroll-area>
               </q-card>
             </q-dialog>
             <div>
               <q-btn class="arrow-button-style" flat dense round icon="keyboard_arrow_left" @click="onPrev"></q-btn>
+              <q-tooltip class="text-body2">Prev</q-tooltip>
             </div>
             <div>
               <q-btn flat dense round icon="keyboard_arrow_right" @click="onNext"></q-btn>
+              <q-tooltip class="text-body2">Next</q-tooltip>
             </div>
-            <div class="calendar-toolbar-radio-style">
-              <q-radio v-model="calendarShape" val="15 min" label="15 min" color="green-14"></q-radio>
-              <q-radio v-model="calendarShape" val="30 min" label="30 min" color="green-14"></q-radio>
-              <q-radio v-model="calendarShape" val="60 min" label="60 min" color="green-14"></q-radio>
+            <div v-if="showTimeShape" class="calendar-toolbar-radio-style">
+              <q-radio v-model="timeShape" val="15 min" label="15 min" color="green-14"></q-radio>
+              <q-radio v-model="timeShape" val="30 min" label="30 min" color="green-14"></q-radio>
+              <q-radio v-model="timeShape" val="60 min" label="60 min" color="green-14"></q-radio>
+              <strong class="padding-left-test"> Your Selected Time Shape: {{ timeShape }}</strong>
             </div>
-            <strong class="padding-left-test"> Your Selected Time Shape: {{ calendarShape }}</strong>
+
             <q-space></q-space>
-
-            <q-btn-dropdown class="col col-2 q-btn-claendar-header justify-center" label="Day"></q-btn-dropdown>
-
+            <q-select :options="calendarItems" v-model="selectedCalendarShape"
+              class="col col-2 calendar-q-select-style"></q-select>
           </div>
-          <q-calendar class="calendar-calendar-padding "></q-calendar>
+          <div>
+            <!-- <q-calendar class="calendar-calendar-padding corners"></q-calendar> -->
+            <q-calendar v-model="selectedDate" :view="selectedCalendarShape.toLowerCase()" locale="en-us"
+              class="calendar-calendar-padding corners" style="height: 400px;" />
+          </div>
         </div>
       </div>
     </div>
   </q-page>
-
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { QCalendar } from '@quasar/quasar-ui-qcalendar'
+
+const selectedDate = ref('');
+const showTimeShape = computed(() => {
+  if (selectedCalendarShape.value === 'Day' || selectedCalendarShape.value === 'Week') {
+    return true;
+  }
+  else {
+    return false
+  }
+});
 
 const tuneOptions = ref(false);
 const showModal = () => {
   tuneOptions.value = true;
 }
+const timeShape = ref('timeShape.value');
+// const timeShape = (() => {
+//   if (timeShape.val === '15 min' || timeShape.val === '30 min' || timeShape.val === '60 min') {
+//     return true;
+//   }
+//   else {
+//     return false;
+//   }
+// });
 
-const calendarShape = ref('calendarShape.value');
+const selectedCalendarShape = ref('Week');
+const calendarItems = ['Day', 'Week', 'Month'];
 
 </script>

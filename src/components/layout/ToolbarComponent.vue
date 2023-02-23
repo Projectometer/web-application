@@ -80,7 +80,6 @@
       <q-tooltip class="text-body2">Abmelden</q-tooltip>
     </q-tabs>
   </div>
-
 </template>
 
 <script setup lang="ts">
