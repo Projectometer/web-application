@@ -107,8 +107,8 @@
               class="col col-2 calendar-q-select-style"></q-select>
           </div>
           <div>
-            <!-- <q-calendar class="calendar-calendar-padding corners"></q-calendar> -->
-            <q-calendar v-model="selectedDate" :view="selectedCalendarShape.toLowerCase()" locale="en-us"
+
+            <q-calendar v-model="selectedDate" :mode="selectedCalendarShape.toLowerCase()" locale="en-us"
               class="calendar-calendar-padding corners" style="height: 400px;" />
           </div>
         </div>
