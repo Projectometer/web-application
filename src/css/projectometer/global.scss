@@ -1,10 +1,8 @@
 * {
   margin: 0%;
   padding: 0%;
-  font-family: 'Sen';
+  font-family: 'Sen Regular';
 }
-
-
 
 .q-layout-header {
   background-color: #333333;
@@ -40,78 +38,157 @@
 
 
 .o-layout {
-  background: rgb(0, 0, 0);
   background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(51, 51, 51, 1) 100%);
 }
 
 .o-container {
   background-image: url("/icons/ex.svg");
-  background-position: center center;
   background-repeat: no-repeat;
-  background-size: 50vw 50vh;
+  background-size: 70vw 70vh;
+  background-position-x: center;
+  background-position-y: 7rem;
 }
 
-.loginStyle {
+
+
+
+
+svg .svg-elem-1 {
+  stroke-dashoffset: 45388.1484375px;
+  stroke-dasharray: 45388.1484375px;
+  fill: transparent;
+  -webkit-transition: stroke-dashoffset 4.5s ease-in 0s, fill 2.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s;
+  transition: stroke-dashoffset 4.5s ease-in 0s, fill 2.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s
+}
+
+svg.active .svg-elem-1 {
+  stroke-dashoffset: 0;
+  fill: rgb(51, 51, 51)
+}
+
+svg .svg-elem-2 {
+  stroke-dashoffset: 31025.763671875px;
+  stroke-dasharray: 31025.763671875px;
+  fill: transparent;
+  -webkit-transition: stroke-dashoffset 4.5s ease-in 0.02s, fill 2.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.9s;
+  transition: stroke-dashoffset 4.5s ease-in 0.02s, fill 2.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.9s
+}
+
+svg.active .svg-elem-2 {
+  stroke-dashoffset: 0;
+  fill: rgb(51, 51, 51)
+}
+
+
+.text-body {
+  background-color: #000000;
+}
+
+
+.avatar-logo {
+  margin-left: .5rem;
+}
+
+.sq-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: .5rem;
+  justify-content: left;
+
+  background-color: $xxBlack80;
+}
+
+.q-ma-sm {
+  margin: 0%;
+}
+
+.user-data-style {
+  font-size: .8rem;
+  height: 1.2rem;
+}
+
+
+.user-data-style-user {
+  font-size: .8rem;
+  height: 1.2rem;
+  margin-top: .6rem;
+}
+
+.q-btn-style {
+  line-height: unset;
+  width: max-content;
   margin-right: 1rem;
 }
 
 
-.btn {
-  border-radius: .3rem;
-  width: 150px;
-  height: 50px;
-  border: 1px solid #46DCFF; // Bonus Color Turkis
-  box-sizing: border-box;
-  background: #333333;
-  ;
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  z-index: 0;
-  transition: 1s;
+.txt-color {
+  color: $xxBlack40;
 }
 
-.btn::before,
-.btn::after {
-  position: absolute;
-  background: #333333;
-  z-index: -1;
-  transition: .2s;
-  content: '';
+.time-style {
+  margin-top: .6rem;
+  margin-left: 4.5rem;
+  justify-items: center;
+  color: $xxBlack20;
 }
 
-.btn::before {
-  height: 50px;
-  width: 130px;
+.date-style {
+  margin-left: 4.5rem;
+  justify-items: center;
+  color: $xxBlack60;
+
 }
 
-.btn::after {
-  width: 150px;
-  height: 30px;
+.login-Style {
+  margin-right: 2rem;
 }
 
-.noselect {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+.logout-Style {
+  margin-right: 1rem;
+  margin-left: 1rem;
 }
 
-.btn:hover::before {
-  width: 0px;
-  background: #333333;
+.my-card {
+  width: 25rem;
+  max-width: 40rem;
+  height: 100%;
+  max-height: 90vh;
 }
 
-.btn:hover::after {
-  height: 0px;
-  background: #333333;
+.q-card-calendar-tune-style {
+  color: $xxBlack02;
+  backdrop-filter: blur(6px) saturate(200%);
+  -webkit-backdrop-filter: blur(6px) saturate(200%);
+  background-color: rgba(51, 51, 51, 0.4);
+  border-radius: .5rem !important;
+  border: 1px solid $xxBlack02;
 }
 
-.btn:hover {
-  background: rgba(255, 255, 255, 0);
+.calendar-tune-range-badge-style {
+  background-color: $xxBlack80 ;
+  color: $xxBlack02 ;
+  padding: .5rem;
+}
+
+.tune-card-selection-style {
+  padding: .5rem;
+}
+
+.style-left {
+  padding-left: 1rem;
+}
+
+.redirect-page-style {
+  background-color: #000000;
+}
+
+.calendar-q-select-style {
+  width: 5rem !important;
+  margin-right: 1rem;
+  color: #000000;
+}
+
+.corners {
+  border-radius: .5rem;
+  border-width: 0px !important;
 }

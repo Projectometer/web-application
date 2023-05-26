@@ -1,0 +1,48 @@
+.calendar-container {
+  margin: 6.5rem 2rem 0rem 2rem;
+  padding-bottom: 1rem;
+  border-radius: .5rem;
+}
+
+
+.calendar-padding {
+  padding: 1rem;
+}
+
+.calendar-padding-new {
+  height: 30rem;
+  padding: 1rem;
+}
+
+.bg-calendar-aside {
+  background-color: $xxBlack05;
+  -webkit-border-top-left-radius: .5rem;
+  -webkit-border-bottom-left-radius: .5rem;
+  -moz-border-radius-topleft: .5rem;
+  -moz-border-radius-bottomleft: .5rem;
+  border-top-left-radius: .5rem;
+  border-bottom-left-radius: .5rem;
+}
+
+
+.bg-calendar-calendar {
+  background-color: $xxBlack20;
+  -webkit-border-top-right-radius: .5rem;
+  -webkit-border-bottom-right-radius: .5rem;
+  -moz-border-radius-topright: .5rem;
+  -moz-border-radius-bottomright: .5rem;
+  border-top-right-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+}
+
+.clendar-header-style {
+  height: 3rem;
+  margin-bottom: 1rem;
+
+}
+
+.calendar-calendar-padding {
+  border: solid 1px black;
+  height: 25rem !important;
+  padding: 1rem;
+}
