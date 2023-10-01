@@ -1,47 +1,33 @@
 import { defineStore } from 'pinia';
-
-export type AuthData = {
-  access_token: string;
-  refresh_token: string;
-  expires_in: number;
-  ext_expires_in: number;
-  scope: string;
-  token_type: string;
-  [key: string]: unknown;
-}
-export type ProfileData = {
-  [key: string]: unknown;
-}
-
-export type AuthStore = {
-  auth: null | AuthData
-  profile: null | ProfileData
-}
+import { AuthData, AuthState, ProfileData } from 'src/types';
 
 export const useAuthStore = defineStore('auth', {
-  state: (): AuthStore => ({
-    auth: null,
-    profile: null
-  }),
+    state: (): AuthState => ({
+        auth: null,
+        profile: null,
+        token: null,
+    }),
 
-  getters: {
-    isLoggedIn(): boolean {
-      return !!this.auth?.access_token
-    }
-  },
+    getters: {
+        isLoggedIn(): boolean {
+            return !!this.token;
+        },
+    },
 
-  actions: {
-    setAuth(auth: AuthData) {
-      this.auth = auth;
+    actions: {
+        setAuth(auth: AuthData) {
+            this.auth = auth;
+        },
+        setToken(token: string) {
+            this.token = token;
+        },
+        setProfile(profile: ProfileData) {
+            this.profile = profile;
+        },
+        logout() {
+            this.auth = null;
+            this.profile = null;
+            this.token = null;
+        },
     },
-    setProfile(profile: ProfileData) {
-      this.profile = profile;
-    },
-    logout() {
-      this.auth = null;
-      this.profile = null;
-    }
-  }
-  ,
-  persist: true
 });

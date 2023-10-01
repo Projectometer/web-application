@@ -1,226 +1,223 @@
+// @import url('src/css/projectometer/colors.scss');
+
 .btn {
-  border-radius: .3rem;
-  width: 150px;
-  height: 50px;
-  border: .05rem solid #46DCFF; // Bonus Color Turkis
-  box-sizing: border-box;
-  background: #333333;
-  ;
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  z-index: 0;
-  transition: 1s;
+    border-radius: 0.3rem;
+    width: 150px;
+    height: 50px;
+    border: 0.05rem solid $xxTurkis; // Bonus Color Turkis
+    box-sizing: border-box;
+    background: $xxBlack80;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 0;
+    transition: 1s;
 }
 
 .btn::before,
 .btn::after {
-  position: absolute;
-  background: #333333;
-  z-index: -1;
-  transition: .2s;
-  content: '';
+    position: absolute;
+    background: $xxBlack80;
+    z-index: -1;
+    transition: 0.2s;
+    content: '';
 }
 
 .btn::before {
-  height: 50px;
-  width: 130px;
+    height: 50px;
+    width: 130px;
 }
 
 .btn::after {
-  width: 150px;
-  height: 30px;
+    width: 150px;
+    height: 30px;
 }
 
 .noselect {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .btn:hover::before {
-  width: 0px;
-  background: #333333;
+    width: 0px;
+    background: $xxBlack80;
 }
 
 .btn:hover::after {
-  height: 0px;
-  background: #333333;
+    height: 0px;
+    background: $xxBlack80;
 }
 
 .btn:hover {
-  background: rgba(255, 255, 255, 0);
+    background: $xxBlack;
 }
 
-
-
+.tooltip-around {
+    border-radius: 0.3rem;
+    border: 0.05rem solid $xxTurkis; // Bonus Color Turkis
+    box-sizing: border-box;
+    background: $xxBlack80;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 99999;
+}
 .btn-small {
-  border-radius: .3rem;
-  margin-left: .5rem;
-  margin-right: .5rem;
-  border: .05rem solid #46DCFF; // Bonus Color Turkis
-  box-sizing: border-box;
-  background: #333333;
-  ;
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  z-index: 0;
-  transition: 2s;
+    border-radius: 0.3rem;
+    border: 0.05rem solid $xxTurkis; // Bonus Color Turkis
+    box-sizing: border-box;
+    background: $xxBlack80;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    z-index: 0;
+    transition: 2s;
 }
-
 
 .btn-small::before,
 .btn-small::after {
-  position: absolute;
-  background: #333333;
-  z-index: -1;
-  transition: .3s;
-  content: '';
+    position: absolute;
+    background: $xxBlack80;
+    z-index: -1;
+    transition: 0.3s;
+    content: '';
 }
 
 .btn-small::before {
-  height: 80px;
-  width: 80px;
+    height: 80px;
+    width: 80px;
 }
 
 .btn-small::after {
-  width: 80px;
-  height: 30px;
+    width: 80px;
+    height: 30px;
 }
 
 .btn-small:hover::before {
-  width: 0px;
-  background: #333333;
+    width: 0px;
+    background: $xxBlack80;
 }
 
 .btn-small:hover::after {
-  height: 0px;
-  background: #333333;
+    height: 0px;
+    background: $xxBlack80;
 }
 
 .btn-small:hover {
-  background: rgba(255, 255, 255, 0);
+    background: $xxBlack;
 }
 
 .q-tab__content {
-  min-width: 0;
+    min-width: 0;
 }
 
 .logout-Style {
-  margin-right: 1.5rem;
+    margin-right: 1.5rem;
 }
 
 .clandar-tuner-button-style {
-  width: 2.5rem !important;
-  height: 2.5rem !important;
-  padding: .5rem !important;
-  margin-left: 1rem;
-  margin-right: 2rem;
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+    padding: 0.5rem !important;
+    // margin-left: 1rem;
+    // margin-right: 2rem;
 }
 
 .q-btn-claendar-header {
-  width: 6rem !important;
-  height: 2.5rem !important;
-  padding: .5rem !important;
-  margin-left: 2rem;
+    width: 6rem !important;
+    height: 2.5rem !important;
+    padding: 0.5rem !important;
+    margin-left: 2rem;
 }
 
 .arrow-button-style {
-  margin-left: .2rem;
-  margin-right: .2rem;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
 }
 
-
 .calendar-toolbar-radio-style {
-  margin-left: 2rem;
-  padding-left: .5rem;
-  border-radius: .5rem;
-  height: 2.5rem;
-  padding-right: 1rem;
-  background-color: $xxBlack40;
+    margin-left: 2rem;
+    padding-left: 0.5rem;
+    border-radius: 0.5rem;
+    height: 2.5rem;
+    padding-right: 1rem;
+    background-color: $xxBlack40;
 }
 
 .padding-left-test {
-  padding-left: 2rem;
+    padding-left: 2rem;
 }
-
-
 
 .btn-save-modal {
-  border-radius: .3rem;
-  width: 7rem;
-  height: 2rem;
-  border: .05rem solid $xxGreen-DB; // Bonus Color Turkis
-  box-sizing: border-box;
-  background: #ffffff00;
-  ;
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  z-index: 0;
-}
-
-
-.noselect {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+    border-radius: 0.3rem;
+    width: 7rem;
+    height: 2rem;
+    border: 0.05rem solid $xxGreen-DB; // Bonus Color Turkis
+    box-sizing: border-box;
+    background: $xxBlack;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 0;
 }
 
 .btn-save-modal:hover {
-  background: rgba(255, 255, 255, 0);
-  border: .1rem solid $xxGreen-DB;
-  background-color: $xxGreen-DB;
-  color: $xxBlack02;
+    background: $xxBlack;
+    border: 0.1rem solid $xxGreen-DB;
+    background-color: $xxGreen-DB;
+    color: $xxBlack02;
 }
-
-
 
 .btn-abort-modal {
-  border-radius: .3rem;
-  width: 7rem;
-  height: 2rem;
-  border: .05rem solid $xxRed-DB;
-  box-sizing: border-box;
-  background: #ffffff00;
-  ;
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  z-index: 0;
-}
-
-.noselect {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+    border-radius: 0.3rem;
+    width: 7rem;
+    height: 2rem;
+    border: 0.05rem solid $xxRed-DB;
+    box-sizing: border-box;
+    background: $xxBlack;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 0;
 }
 
 .btn-abort-modal:hover {
-  background: rgba(255, 255, 255, 0);
-  border: .1rem solid $xxRed-DB;
-  background-color: $xxRed-DB;
-  color: $xxBlack02;
+    background: $xxBlack;
+    border: 0.1rem solid $xxRed-DB;
+    background-color: $xxRed-DB;
+    color: $xxBlack02;
+}
+
+.q-icon.notranslate.material-icons.q-btn-dropdown__arrow.q-btn-dropdown__arrow-container {
+    display: none !important;
+}
+
+.new-btn {
+    border-radius: 0.3rem;
+    width: 150px;
+    height: 50px;
+    border: 0.05rem solid $xxTurkis; // Bonus Color Turkis
+    box-sizing: border-box;
+    background: $xxBlack80;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 0;
+    transition: 1s;
 }

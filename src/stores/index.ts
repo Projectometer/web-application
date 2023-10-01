@@ -1,8 +1,7 @@
-import { store } from 'quasar/wrappers'
-import { createPinia } from 'pinia'
+import { store } from 'quasar/wrappers';
+import { createPinia } from 'pinia';
 import { Router } from 'vue-router';
-import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
-
+import { createPersistedStatePlugin } from 'pinia-plugin-persistedstate-2';
 
 /*
  * When adding new properties to stores, you should also
@@ -10,9 +9,9 @@ import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
  * @see https://pinia.vuejs.org/core-concepts/plugins.html#typing-new-store-properties
  */
 declare module 'pinia' {
-  export interface PiniaCustomProperties {
-    readonly router: Router;
-  }
+    export interface PiniaCustomProperties {
+        readonly router: Router;
+    }
 }
 
 /*
@@ -25,11 +24,10 @@ declare module 'pinia' {
  */
 
 export default store((/* { ssrContext } */) => {
-  const pinia = createPinia()
-  pinia.use(piniaPluginPersistedstate)
+    const pinia = createPinia();
+    pinia.use(createPersistedStatePlugin());
+    // You can add Pinia plugins here
+    // pinia.use(SomePiniaPlugin)
 
-  // You can add Pinia plugins here
-  // pinia.use(SomePiniaPlugin)
-
-  return pinia
-})
+    return pinia;
+});

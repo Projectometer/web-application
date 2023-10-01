@@ -1,0 +1,76 @@
+// Default text size
+$text-sizes: 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24,
+    25, 26, 27, 28, 29, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 60, 70, 80,
+    90, 100, 10, 120, 130, 140, 150, 160, 170, 180;
+
+// Text size options & multipliers
+$text-size-options: (
+    'xs': 0.8,
+    'sm': 0.9,
+    'md': 1.1,
+    'lg': 1.2,
+);
+
+// variable text size classes
+@each $text-size, $multiplier in $text-size-options {
+    [data-text-size='#{$text-size}'] {
+        @each $text-size in $text-sizes {
+            .text-size-#{$text-size} {
+                font-size: #{$text-size * $multiplier}px;
+
+                // q-input overrides
+                &.q-field--dense {
+                    .q-field__control,
+                    .qfield__marginal {
+                        height: 46px * $multiplier;
+                    }
+                    .q-field__label {
+                        top: (46px * $multiplier)/4;
+                        font-size: 16px * $multiplier;
+                        line-height: 23px * $multiplier;
+                    }
+                }
+                &.q-field__labeled {
+                    .q-field__native {
+                        line-height: 24px * $multiplier;
+                    }
+                }
+
+                // q-select overrides
+                &.q-select {
+                    .q-field__label {
+                        font-size: 16px * $multiplier;
+                        top: 18px * $multiplier;
+                        line-height: 23px * $multiplier;
+                    }
+                    .qfield__marginal {
+                        height: 56px * $multiplier;
+                    }
+                    &.q-field--auto-height.q-field--labeled
+                        .q-field__control-container {
+                        padding-top: 24px * $multiplier;
+                    }
+                }
+
+                // q-tab overrides
+                &.q-tab {
+                    .q-tab__icon {
+                        width: 24px * $multiplier;
+                        height: 24px * $multiplier;
+                        font-size: 24px * $multiplier;
+                    }
+                    .q-tab__label {
+                        font-size: #{$text-size * $multiplier};
+                    }
+                }
+            }
+        }
+    }
+}
+
+// fixed text size classes
+@each $text-size in $text-sizes {
+    .text-size-fixed-#{$text-size} {
+        font-size: #{$text-size}px;
+    }
+}

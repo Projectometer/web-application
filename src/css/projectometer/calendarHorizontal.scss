@@ -1,18 +1,15 @@
-.calendar-horizontal-preview {
-  height: 4rem;
-  margin: 1.5rem 2rem 1rem 2rem;
-  background-color: #000000;
-  border-radius: .5rem;
+// @import url('src/css/projectometer/colors.scss');
 
+.q-field--standard .q-field__control:before {
+    border-bottom: none !important;
 }
 
 .clendar-horizontal-hover:hover {
+    box-shadow: 0px 0px 0.4rem 0.1rem $xxLila;
+    -webkit-box-shadow: 0px 0px 0.4rem 0.1rem $xxLila;
+    -moz-box-shadow: 0px 0px 0.4rem 0.1rem $xxLila;
 
-  box-shadow: 0px 0px .7rem .1rem rgba(140, 165, 255, 1);
-  -webkit-box-shadow: 0px 0px .7rem .1rem rgba(140, 165, 255, 1);
-  -moz-box-shadow: 0px 0px .7rem .1rem rgba(140, 165, 255, 1);
-
-  -webkit-transition: box-shadow 0.3s ease-in-out 0s;
-  -moz-transition: box-shadow 0.3s ease-in-out 0s;
-  transition: box-shadow 0.3s ease-in-out 0s;
+    -webkit-transition: box-shadow 0.3s ease-in-out 0s;
+    -moz-transition: box-shadow 0.3s ease-in-out 0s;
+    transition: box-shadow 0.3s ease-in-out 0s;
 }

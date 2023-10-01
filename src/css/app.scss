@@ -1,12 +1,17 @@
-@import "node_modules/@quasar/quasar-ui-qcalendar/src/index.sass";
+@import 'node_modules/@quasar/quasar-ui-qcalendar/src/index.sass';
 
 // app global css in SCSS form
-@import "./projectometer/colors.scss";
-@import "./projectometer/fonts.scss";
-@import "./projectometer/badgeStyle.scss";
-@import "./projectometer/errorPage.scss";
-@import "./projectometer/calendarStyle.scss";
-@import "./projectometer/calendarHorizontal.scss";
+@import './text.style.scss';
+@import './size.style.scss';
+@import './projectometer/colors.scss';
 
-@import "./projectometer/buttonStyle.scss";
-@import "./projectometer/global.scss";
+@import './new.global.scss';
+@import './projectometer/fonts.scss';
+@import './projectometer/badgeStyle.scss';
+@import './projectometer/errorPage.scss';
+@import './projectometer/calendarStyle.scss';
+@import './projectometer/calendarHorizontal.scss';
+
+@import './projectometer/buttonStyle.scss';
+@import './projectometer/global.scss';
+@import './custom.btn.css';

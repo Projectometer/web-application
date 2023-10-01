@@ -1,51 +1,51 @@
+// @import url('src/css/projectometer/colors.scss');
+
 .btn-error {
-  border-radius: .3rem;
-  width: 150px;
-  height: 50px;
-  border: .05rem solid #46DCFF;
-  box-sizing: border-box;
-  background: #333333;
-  ;
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  z-index: 0;
-  transition: 1s;
+    border-radius: 0.3rem;
+    width: 150px;
+    height: 50px;
+    border: 0.05rem solid $xxTurkis;
+    box-sizing: border-box;
+    background: $xxBlack80;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 0;
+    transition: 1s;
 }
 
 .btn-error::before,
 .btn-error::after {
-  position: absolute;
-  background: #333333;
-  z-index: -1;
-  transition: .2s;
-  content: '';
+    position: absolute;
+    background: $xxBlack80;
+    z-index: -1;
+    transition: 0.2s;
+    content: '';
 }
 
 .btn-error::before {
-  width: 150px;
-  height: 50px;
-
+    width: 150px;
+    height: 50px;
 }
 
 .btn-error::after {
-  width: 150px;
-  height: 50px;
+    width: 150px;
+    height: 50px;
 }
 
 .btn-error:hover::before {
-  width: 0px;
-  background: #333333;
+    width: 0px;
+    background: $xxBlack80;
 }
 
 .btn-error:hover::after {
-  height: 0px;
-  background: #333333;
+    height: 0px;
+    background: $xxBlack80;
 }
 
 .btn-error:hover {
-  background: #333333;
+    background: $xxBlack80;
 }

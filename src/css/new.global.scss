@@ -1,0 +1,208 @@
+// @import url('src/css/projectometer/colors.scss');
+
+.icon-rotate-90 .q-icon {
+    transform: rotate(90deg);
+}
+.icon-rotate-135 .q-icon {
+    transform: rotate(135deg);
+}
+.q-mt-xxl {
+    margin-top: 180px;
+}
+
+.direction-button {
+    color: $xxBlack;
+    z-index: 20;
+    height: 98%;
+}
+
+.selected-date {
+    color: $xxWhite;
+    border-bottom: 2px $xxWhite solid;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+.day-name {
+    color: $xxBlack60;
+}
+.selected-date .day-name {
+    color: $xxWhite;
+}
+
+.btn-week-day:hover {
+    border-radius: 0.3rem;
+    border: 0.05rem solid $xxTurkis !important ;
+    box-sizing: border-box;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    z-index: 0;
+}
+.btn-week:hover {
+    border-radius: 0.3rem;
+    background-color: $xxBlack40;
+    box-sizing: border-box;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    z-index: 0;
+}
+.btn-week:hover .q-btn__content .day-name {
+    color: $xxBlack02;
+}
+::-webkit-scrollbar {
+    height: 12px;
+    width: 14px;
+    background: transparent;
+    z-index: 12;
+    overflow: visible;
+}
+.scrollable-element {
+    scrollbar-color: red yellow;
+}
+::-webkit-scrollbar-thumb {
+    width: 10px;
+    background-color: $xxBlack05;
+    border-radius: 10px;
+    z-index: 12;
+    // border: 4px solid $xxBlack;
+    background-clip: padding-box;
+    -webkit-transition: background-color 0.28s ease-in-out;
+    transition: background-color 0.28s ease-in-out;
+    margin: 4px;
+    min-height: 32px;
+    min-width: 32px;
+}
+
+.q-calendar-month__body .q-calendar__hoverable:hover,
+.q-calendar-day .q-calendar__hoverable:hover .q-calendar__focus-helper {
+    background-color: $xxLila !important;
+    opacity: 0.15;
+    color: #fafafa;
+}
+
+.q-card-calendar-tune-style .q-field__native {
+    color: $xxWhite;
+}
+.square-btn {
+    min-height: auto !important;
+}
+
+.c-header .q-field--outlined.q-field--highlighted .q-field__control:after,
+.c-header .q-field--outlined .q-field__control:before {
+    border: none !important;
+    background-color: $xxBlack40 !important;
+}
+.c-header .q-field--outlined .q-field__control:hover:before,
+.c-header .q-field--outlined .q-field__control:hover span,
+.c-header .q-field--outlined .q-field__control:hover .q-icon {
+    background-color: $xxBlack !important;
+    color: $xxWhite !important;
+}
+
+.c-header .q-field--outlined.q-field--focused .q-field__control,
+.c-header .q-field--outlined.q-field--focused .q-field__control span,
+.c-header .q-field--outlined.q-field--focused .q-field__control i.q-icon {
+    color: $xxBlack;
+    background-color: $xxBlack40 !important;
+    z-index: 99;
+}
+
+.my-form .q-field__label.no-pointer-events.absolute.ellipsis,
+.MY-FORM .q-radio__label.q-anchor--skip {
+    color: $xxBlack !important;
+}
+.my-form .q-field__control.relative-position.row.no-wrap {
+    background-color: $xxWhite !important;
+}
+.my-card .q-select.q-field--outlined .q-field__control:before,
+.my-card .q-input.q-field--outlined .q-field__control:before {
+    border-color: $xxBlack20 !important;
+}
+.q-toolbar .q-avatar__content {
+    height: 45px !important;
+}
+
+.my-mobile .q-item__section.column.q-item__section--main.justify-center {
+    display: none !important;
+}
+.my-mobile
+    .q-item__section.column.q-item__section--side.justify-center.q-focusable.relative-position.cursor-pointer {
+    width: 50%;
+}
+.my-mobile
+    .q-item.q-item-type.row.no-wrap.q-item--clickable.q-link.cursor-pointer.q-focusable.q-hoverable {
+    padding: 0 !important;
+}
+.my-mobile .q-item {
+    min-height: 24px !important;
+}
+.q-toolbar.m-toolbar {
+    min-height: 32px !important;
+}
+.my-mobile.q-list .q-expansion-item--expanded {
+    height: 108px !important;
+}
+.my-list {
+    border-color: $xxWhite;
+}
+.my-list .q-item {
+    background-color: $xxBlack40 !important;
+    border-bottom: 1px solid $xxWhite;
+}
+.my-list .q-item:hover {
+    background-color: $xxBlack !important;
+}
+.my-list .q-item:hover .q-btn:before {
+    background-color: $xxBlack40 !important;
+}
+.my-list .q-item.q-hoverable:hover .q-focus-helper {
+    background: $xxBlack !important;
+    display: none;
+}
+.my-list .q-item.q-hoverable:hover .q-item__section--main {
+    color: $xxWhite !important;
+}
+.my-list .q-item.q-hoverable:hover .q-focus-helper::before,
+.my-list .q-item.q-hoverable:hover .q-focus-helper::after {
+    opacity: 0 !important;
+}
+.delete-btn {
+    color: $xxRed-LB;
+}
+.edit-btn {
+    color: $xxLila;
+}
+.add-btn {
+    color: greenyellow;
+}
+
+.setting-calender
+    .q-field--outlined.q-field--highlighted
+    .q-field__control:after,
+.setting-calender .q-field--outlined .q-field__control:before {
+    border: none !important;
+    background-color: $xxBlack40 !important;
+}
+.setting-calender .q-field--outlined .q-field__control:hover:before,
+.setting-calender .q-field--outlined .q-field__control:hover span,
+.setting-calender .q-field--outlined .q-field__control:hover .q-icon {
+    background-color: $xxBlack !important;
+    color: $xxWhite !important;
+}
+
+.setting-calender .q-field--outlined.q-field--focused .q-field__control,
+.setting-calender .q-field--outlined.q-field--focused .q-field__control span,
+.setting-calender
+    .q-field--outlined.q-field--focused
+    .q-field__control
+    i.q-icon {
+    color: $xxBlack;
+    background-color: $xxBlack40 !important;
+    z-index: 99;
+}
+.report-chip .q-chip {
+    background-color: $xxTurkis;
+    color: $xxWhite;
+}
+.report-chip .q-chip__icon {
+    color: $xxRed-DB;
+}

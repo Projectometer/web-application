@@ -1,26 +1,84 @@
 import { RouteRecordRaw } from 'vue-router';
+import {
+    AuthCallbackPage,
+    ErrorNotFoundPage,
+    AuthLayout,
+    LoginPage,
+    MainLayout,
+    MainPage,
+    ReportsPage,
+    TimerPage,
+    TestPage,
+    ProjectsPage,
+    TagsPage,
+    SettingPage,
+} from './components';
 
 const routes: RouteRecordRaw[] = [
-  {
-    path: '/',
-    component: () => import('src/layouts/MainLayout.vue'),
-    children: [
-      { path: '', name: 'main', component: () => import('src/pages/MainPage.vue') },
-      { path: 'Calendar', component: () => import('src/pages/TimerPage.vue') },
-      { path: 'Reports', component: () => import('src/pages/Reports.vue') },
-    ],
-  },
-  {
-    path: '/auth',
-    component: () => import('src/layouts/LoginLayout.vue'),
-    children: [
-      { path: 'callback', name: 'login-callback', component: () => import('src/pages/auth/AuthCallbackPage.vue') },
-    ],
-  },
-  {
-    path: '/:catchAll(.*)*',
-    component: () => import('pages/ErrorNotFound.vue'),
-  },
+    {
+        path: '/',
+        component: MainLayout,
+        meta: { requireAuth: true },
+        children: [
+            {
+                path: '',
+                name: 'main',
+                component: MainPage,
+            },
+            {
+                path: 'Calendar',
+                component: TimerPage,
+            },
+            {
+                path: 'Reports',
+                component: ReportsPage,
+            },
+            {
+                path: 'Project',
+                component: ProjectsPage,
+            },
+            {
+                path: 'Tags',
+                component: TagsPage,
+            },
+            {
+                path: 'Setting',
+                component: SettingPage,
+            },
+        ],
+    },
+    {
+        path: '/test-c',
+        component: MainLayout,
+        meta: { requireAuth: true },
+        children: [
+            {
+                path: '',
+                name: 'main-c',
+                component: TestPage,
+            },
+        ],
+    },
+    {
+        path: '/auth',
+        component: AuthLayout,
+        children: [
+            {
+                path: '',
+                name: 'auth.login',
+                component: LoginPage,
+            },
+            {
+                path: 'callback',
+                name: 'login-callback',
+                component: AuthCallbackPage,
+            },
+        ],
+    },
+    {
+        path: '/:catchAll(.*)*',
+        component: ErrorNotFoundPage,
+    },
 ];
 
 export default routes;
